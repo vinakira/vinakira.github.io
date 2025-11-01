@@ -38,3 +38,35 @@ a {
 a:hover {
     text-decoration: underline; /* 마우스를 올리면 밑줄 표시 */
 }
+
+/* style.css 파일 맨 아래에 추가 */
+
+/* ========== 모바일 반응형 ========== */
+@media (max-width: 600px) {
+
+    /* 화면 폭이 600px 이하일 때 적용될 스타일 */
+
+    .container {
+        /* * 데스크톱에서는 위아래 여백이 40px이었지만, 
+         * 모바일에서는 15px로 줄여서 공간을 확보합니다.
+         */
+        margin: 15px auto;
+        
+        /* * 좌우 여백(padding)도 20px에서 15px로 살짝 줄입니다.
+         */
+        padding: 15px;
+    }
+
+    h1 {
+        /* 모바일에서는 제목(h1) 폰트 크기를 살짝 줄입니다. */
+        font-size: 28px; 
+    }
+
+    /* * 이미지 태그가 container 박스를 
+     * 삐져나가지 않도록 최대 크기를 100%로 고정합니다.
+     */
+    img, video {
+        max-width: 100%;
+        height: auto; /* 비율 자동 조절 */
+    }
+}
